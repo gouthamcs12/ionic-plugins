@@ -1,0 +1,7 @@
+{
+  "name": "my-app",
+  "devDependencies": {
+    "@capacitor/cli": "^3.2.5",
+    "cordova-plugin-app-version": "^0.1.14"
+  }
+}
