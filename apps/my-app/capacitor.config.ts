@@ -5,10 +5,6 @@ const config: CapacitorConfig = {
   appName: 'myApp',
   webDir: '../../dist/apps/my-app',
   bundledWebRuntime: false,
-  server: {
-    url: 'http://192.168.1.4:4200',
-    cleartext: true
-  }
 };
 
 export default config;

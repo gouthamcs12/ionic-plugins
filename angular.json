@@ -9,7 +9,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/my-app",
             "index": "apps/my-app/src/index.html",
@@ -23,7 +25,8 @@
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
-              }
+              },
+              "apps/my-app/src/manifest.webmanifest"
             ],
             "styles": [
               "apps/my-app/src/styles.scss",
@@ -31,7 +34,9 @@
                 "input": "apps/my-app/src/theme/variables.scss"
               }
             ],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "apps/my-app/ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -95,7 +100,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/my-app"],
+          "outputs": [
+            "coverage/apps/my-app"
+          ],
           "options": {
             "jestConfig": "apps/my-app/jest.config.js",
             "passWithNoTests": true
@@ -213,14 +220,20 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/my-app-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/my-app-e2e/**/*.{js,ts}"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["my-app"]
+      "implicitDependencies": [
+        "my-app"
+      ]
     },
     "nx-ionic": {
       "projectType": "application",
@@ -230,7 +243,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/nx-ionic",
             "index": "apps/nx-ionic/src/index.html",
@@ -242,7 +257,9 @@
               "apps/nx-ionic/src/favicon.ico",
               "apps/nx-ionic/src/assets"
             ],
-            "styles": ["apps/nx-ionic/src/styles.scss"],
+            "styles": [
+              "apps/nx-ionic/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -307,7 +324,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/nx-ionic"],
+          "outputs": [
+            "coverage/apps/nx-ionic"
+          ],
           "options": {
             "jestConfig": "apps/nx-ionic/jest.config.js",
             "passWithNoTests": true
@@ -336,14 +355,20 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/nx-ionic-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/nx-ionic-e2e/**/*.{js,ts}"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["nx-ionic"]
+      "implicitDependencies": [
+        "nx-ionic"
+      ]
     }
   }
 }
